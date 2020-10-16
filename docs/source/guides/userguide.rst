@@ -84,7 +84,7 @@ Let’s examine the timeseries of bed elevations by taking slices out of the ``'
 
     >>> fig, ax = plt.subplots(1, nt, figsize=(12, 2))
     >>> for i, t in enumerate(ts):
-    ...     ax[i].imshow(rcm8cube['eta'].data[t, :, :], vmin=-5, vmax=0.5) #doctest: +SKIP
+    ...     ax[i].imshow(rcm8cube['eta'][t, :, :], vmin=-5, vmax=0.5) #doctest: +SKIP
     ...     ax[i].set_title('t = ' + str(t)) #doctest: +SKIP
     ...     ax[i].axes.get_xaxis().set_ticks([]) #doctest: +SKIP
     ...     ax[i].axes.get_yaxis().set_ticks([]) #doctest: +SKIP
@@ -104,7 +104,7 @@ For example:
 .. doctest::
 
     >>> # compute the change in bed elevation between the last two intervals above
-    >>> diff_time = rcm8cube['eta'].data[ts[-1], ...] - rcm8cube['eta'].data[ts[-2], ...]
+    >>> diff_time = rcm8cube['eta'][ts[-1], ...] - rcm8cube['eta'][ts[-2], ...]
 
     >>> fig, ax = plt.subplots(figsize=(5, 3))
     >>> im = ax.imshow(diff_time, cmap='RdBu', vmax=abs(diff_time).max(), vmin=-abs(diff_time).max())
@@ -327,7 +327,7 @@ Here’s a simple example to demonstrate how we place data into the stratigraphy
 
 .. doctest::
 
-    >>> ets = rcm8cube['eta'].data[:, 25, 120]  # a "real" slice of the model
+    >>> ets = rcm8cube['eta'][:, 25, 120]  # a "real" slice of the model
 
     >>> fig, ax = plt.subplots(figsize=(8, 4))
     >>> dm.plot.show_one_dimensional_trajectory_to_strata(ets, ax=ax, dz=0.25)
@@ -478,12 +478,12 @@ Currently implemented `Masks`:
     >>> maskcube = dm.sample_data.cube.rcm8()
 
     >>> # create the masks from variables in the cube
-    >>> land_mask = dm.mask.LandMask(maskcube['eta'].data[-1, :, :])
-    >>> wet_mask = dm.mask.WetMask(maskcube['eta'].data[-1, :, :])
-    >>> channel_mask = dm.mask.ChannelMask(maskcube['velocity'].data[-1, :, :], maskcube['eta'].data[-1, :, :])
+    >>> land_mask = dm.mask.LandMask(maskcube['eta'][-1, :, :])
+    >>> wet_mask = dm.mask.WetMask(maskcube['eta'][-1, :, :])
+    >>> channel_mask = dm.mask.ChannelMask(maskcube['velocity'][-1, :, :], maskcube['eta'][-1, :, :])
     >>> centerline_mask = dm.mask.CenterlineMask(channel_mask)
-    >>> edge_mask = dm.mask.EdgeMask(maskcube['eta'].data[-1, :, :])
-    >>> shore_mask = dm.mask.ShorelineMask(maskcube['eta'].data[-1, :, :])
+    >>> edge_mask = dm.mask.EdgeMask(maskcube['eta'][-1, :, :])
+    >>> shore_mask = dm.mask.ShorelineMask(maskcube['eta'][-1, :, :])
 
 .. doctest::
 
@@ -492,7 +492,7 @@ Currently implemented `Masks`:
     >>> ax0 = fig.add_subplot(spec[0, :])
     >>> axs = [fig.add_subplot(spec[i, j]) for i, j in zip(np.repeat(np.arange(1, 4), 2), np.tile(np.arange(2), (4,)))]
 
-    >>> ax0.imshow(maskcube['eta'].data[-1, :, :]) #doctest: +SKIP
+    >>> ax0.imshow(maskcube['eta'][-1, :, :]) #doctest: +SKIP
     >>> for i, m in enumerate([land_mask, wet_mask, channel_mask, centerline_mask, edge_mask, shore_mask]):
     ...     axs[i].imshow(m.mask, cmap='gray') #doctest: +SKIP
     ...     axs[i].set_title(m.mask_type) #doctest: +SKIP
