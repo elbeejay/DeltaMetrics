@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Section operations and classes" href="../reference/section/index.html" />
+    <link rel="next" title="Channel Mobility Functions" href="../reference/mobility/index.html" />
     <link rel="prev" title="deltametrics.mask.EdgeMask" href="deltametrics.mask.EdgeMask.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -29,7 +29,7 @@
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="../reference/section/index.html" title="Section operations and classes"
+          <a href="../reference/mobility/index.html" title="Channel Mobility Functions"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="deltametrics.mask.EdgeMask.html" title="deltametrics.mask.EdgeMask"
@@ -45,8 +45,8 @@
   <p class="topless"><a href="deltametrics.mask.EdgeMask.html"
                         title="previous chapter">deltametrics.mask.EdgeMask</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="../reference/section/index.html"
-                        title="next chapter">Section operations and classes</a></p>
+  <p class="topless"><a href="../reference/mobility/index.html"
+                        title="next chapter">Channel Mobility Functions</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -134,7 +134,7 @@ channel mask.</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.mask.CenterlineMask.compute_centerlinemask" title="deltametrics.mask.CenterlineMask.compute_centerlinemask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_centerlinemask</span></code></a>(**kwargs)</p></td>
 <td><p>Compute the centerline mask.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.mask.CenterlineMask.show" title="deltametrics.mask.CenterlineMask.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>(**kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.mask.CenterlineMask.show" title="deltametrics.mask.CenterlineMask.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>([t])</p></td>
 <td><p>Show the mask.</p></td>
 </tr>
 </tbody>
@@ -212,9 +212,18 @@ convert everything to uints for speed and size.</p>
 
 <dl class="method">
 <dt id="deltametrics.mask.CenterlineMask.show">
-<code class="descname">show</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.mask.CenterlineMask.show" title="Permalink to this definition">¶</a></dt>
+<code class="descname">show</code><span class="sig-paren">(</span><em>t=-1</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.mask.CenterlineMask.show" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show the mask.</p>
-<p>Passes <cite>**kwargs</cite> to <code class="docutils literal notranslate"><span class="pre">matplotlib.imshow</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>int</em><em>, </em><em>optional</em>) – Value of time slice or integer from first dimension in 3D (t-x-y)
+convention to display the mask from. Default is -1 so the ‘final’
+mask in time is displayed if this argument is not supplied.</p></li>
+<li><p><strong>**kwargs to matplotlib.imshow.</strong> (<em>Passes</em>) – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -237,7 +246,7 @@ convert everything to uints for speed and size.</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="../reference/section/index.html" title="Section operations and classes"
+          <a href="../reference/mobility/index.html" title="Channel Mobility Functions"
              >next</a> |</li>
         <li class="right" >
           <a href="deltametrics.mask.EdgeMask.html" title="deltametrics.mask.EdgeMask"
