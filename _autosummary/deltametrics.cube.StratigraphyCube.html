@@ -26,9 +26,6 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
           <a href="deltametrics.cube.BaseCube.html" title="deltametrics.cube.BaseCube"
              accesskey="N">next</a> |</li>
         <li class="right" >
@@ -133,7 +130,7 @@ supplied, a new default VariableSet instance is created.</p></li>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.show_cube" title="deltametrics.cube.StratigraphyCube.show_cube"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_cube</span></code></a>(var[, t, x, y, ax])</p></td>
 <td><p>Show the cube in a 3d axis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.show_plan" title="deltametrics.cube.StratigraphyCube.show_plan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_plan</span></code></a>(var[, t, ax, title, ticks])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.show_plan" title="deltametrics.cube.StratigraphyCube.show_plan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_plan</span></code></a>(var[, t, ax, title, ticks, …])</p></td>
 <td><p>Show planform image.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.show_section" title="deltametrics.cube.StratigraphyCube.show_section"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_section</span></code></a>(*args, **kwargs)</p></td>
@@ -175,37 +172,40 @@ supplied, a new default VariableSet instance is created.</p></li>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.dataio" title="deltametrics.cube.StratigraphyCube.dataio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataio</span></code></a></p></td>
 <td><p>Data I/O handler.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.plan_set" title="deltametrics.cube.StratigraphyCube.plan_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plan_set</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.plan_set" title="deltametrics.cube.StratigraphyCube.plan_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plan_set</span></code></a></p></td>
 <td><p>Set of plan instances.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.plans" title="deltametrics.cube.StratigraphyCube.plans"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plans</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.plans" title="deltametrics.cube.StratigraphyCube.plans"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plans</span></code></a></p></td>
 <td><p>Set of plan instances.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.section_set" title="deltametrics.cube.StratigraphyCube.section_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">section_set</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.section_set" title="deltametrics.cube.StratigraphyCube.section_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">section_set</span></code></a></p></td>
 <td><p>Set of section instances.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.sections" title="deltametrics.cube.StratigraphyCube.sections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sections</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.sections" title="deltametrics.cube.StratigraphyCube.sections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sections</span></code></a></p></td>
 <td><p>Set of section instances.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.shape" title="deltametrics.cube.StratigraphyCube.shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shape</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.shape" title="deltametrics.cube.StratigraphyCube.shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shape</span></code></a></p></td>
 <td><p>Number of elements in data (HxLxW).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.strata" title="deltametrics.cube.StratigraphyCube.strata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">strata</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.strata" title="deltametrics.cube.StratigraphyCube.strata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">strata</span></code></a></p></td>
 <td><p>Strata surfaces.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.variables" title="deltametrics.cube.StratigraphyCube.variables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">variables</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.variables" title="deltametrics.cube.StratigraphyCube.variables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">variables</span></code></a></p></td>
 <td><p>List of variable names as strings.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.varset" title="deltametrics.cube.StratigraphyCube.varset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">varset</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.varset" title="deltametrics.cube.StratigraphyCube.varset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">varset</span></code></a></p></td>
 <td><p>Variable styling for plotting.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.x" title="deltametrics.cube.StratigraphyCube.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.x" title="deltametrics.cube.StratigraphyCube.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
 <td><p>x-direction coordinate.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.y" title="deltametrics.cube.StratigraphyCube.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.y" title="deltametrics.cube.StratigraphyCube.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
 <td><p>y-direction coordinate.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.z" title="deltametrics.cube.StratigraphyCube.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.cube.StratigraphyCube.z" title="deltametrics.cube.StratigraphyCube.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
 <td><p>Vertical coordinate.</p></td>
 </tr>
 </tbody>
@@ -319,7 +319,7 @@ data off-disk as needed.</p>
 <dd><p>Create from a DataCube.</p>
 <p class="rubric">Examples</p>
 <p>Create a stratigraphy cube from the example <code class="docutils literal notranslate"><span class="pre">rcm8cube</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rcm8cube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">cube</span><span class="o">.</span><span class="n">rcm8</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rcm8cube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">rcm8</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sc8cube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">cube</span><span class="o">.</span><span class="n">StratigraphyCube</span><span class="o">.</span><span class="n">from_DataCube</span><span class="p">(</span><span class="n">rcm8cube</span><span class="p">,</span> <span class="n">dz</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -450,7 +450,7 @@ user having to specify <code class="docutils literal notranslate"><span class="p
 
 <dl class="method">
 <dt id="deltametrics.cube.StratigraphyCube.show_plan">
-<code class="descname">show_plan</code><span class="sig-paren">(</span><em>var</em>, <em>t=-1</em>, <em>ax=None</em>, <em>title=None</em>, <em>ticks=False</em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.cube.StratigraphyCube.show_plan" title="Permalink to this definition">¶</a></dt>
+<code class="descname">show_plan</code><span class="sig-paren">(</span><em>var</em>, <em>t=-1</em>, <em>ax=None</em>, <em>title=None</em>, <em>ticks=False</em>, <em>colorbar_label=False</em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.cube.StratigraphyCube.show_plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show planform image.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -534,9 +534,6 @@ method.</p>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
         <li class="right" >
           <a href="deltametrics.cube.BaseCube.html" title="deltametrics.cube.BaseCube"
              >next</a> |</li>

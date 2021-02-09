@@ -26,9 +26,6 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
           <a href="deltametrics.section.CircularSection.html" title="deltametrics.section.CircularSection"
              accesskey="N">next</a> |</li>
         <li class="right" >
@@ -107,7 +104,7 @@ any functionality (via the <a class="reference internal" href="#deltametrics.sec
 <tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.section.DipSection.connect" title="deltametrics.section.DipSection.connect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect</span></code></a>(CubeInstance[, name])</p></td>
 <td><p>Connect this Section instance to a Cube instance.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.section.DipSection.show" title="deltametrics.section.DipSection.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>(SectionAttribute[, style, data, label, ax])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.section.DipSection.show" title="deltametrics.section.DipSection.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>(SectionAttribute[, style, data, label, …])</p></td>
 <td><p>Show the section.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#deltametrics.section.DipSection.show_trace" title="deltametrics.section.DipSection.show_trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_trace</span></code></a>(*args[, ax])</p></td>
@@ -190,7 +187,7 @@ variable <code class="docutils literal notranslate"><span class="pre">var</span>
 
 <dl class="method">
 <dt id="deltametrics.section.DipSection.show">
-<code class="descname">show</code><span class="sig-paren">(</span><em>SectionAttribute</em>, <em>style='shaded'</em>, <em>data=None</em>, <em>label=False</em>, <em>ax=None</em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.section.DipSection.show" title="Permalink to this definition">¶</a></dt>
+<code class="descname">show</code><span class="sig-paren">(</span><em>SectionAttribute</em>, <em>style='shaded'</em>, <em>data=None</em>, <em>label=False</em>, <em>colorbar=True</em>, <em>colorbar_label=False</em>, <em>ax=None</em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.section.DipSection.show" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show the section.</p>
 <p>Method enumerates convenient routines for visualizing sections of data
 and stratigraphy. Includes support for multiple data <cite>style</cite> and
@@ -217,6 +214,11 @@ a <cite>StratigraphyCube</cite> section.</p></li>
 False, display nothing. If <code class="docutils literal notranslate"><span class="pre">label=True</span></code>, the label name from the
 <a class="reference internal" href="deltametrics.plot.VariableSet.html#deltametrics.plot.VariableSet" title="deltametrics.plot.VariableSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VariableSet</span></code></a> is used. Other arguments are
 attempted to coerce to <cite>str</cite>, and the literal is diplayed.</p></li>
+<li><p><strong>colorbar</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code>, optional) – Whether a colorbar is appended to the axis.</p></li>
+<li><p><strong>colorbar_label</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code>, <cite>str</cite>, optional) – Display a label of the variable name along the colorbar. Default is
+False, display nothing. If <code class="docutils literal notranslate"><span class="pre">label=True</span></code>, the label name from the
+<a class="reference internal" href="deltametrics.plot.VariableSet.html#deltametrics.plot.VariableSet" title="deltametrics.plot.VariableSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VariableSet</span></code></a> is used. Other arguments are
+attempted to coerce to <cite>str</cite>, and the literal is diplayed.</p></li>
 <li><p><strong>ax</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code> object, optional) – A <cite>matplotlib</cite> <cite>Axes</cite> object to plot the section. Optional; if not
 provided, a call is made to <code class="docutils literal notranslate"><span class="pre">plt.gca()</span></code> to get the current (or
 create a new) <cite>Axes</cite> object.</p></li>
@@ -225,7 +227,7 @@ create a new) <cite>Axes</cite> object.</p></li>
 </dl>
 <p class="rubric">Examples</p>
 <p><em>Example 1:</em> Display the <cite>velocity</cite> spacetime section of a DataCube.</p>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rcm8cube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">cube</span><span class="o">.</span><span class="n">rcm8</span><span class="p">()</span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rcm8cube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">rcm8</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rcm8cube</span><span class="o">.</span><span class="n">register_section</span><span class="p">(</span><span class="s1">&#39;demo&#39;</span><span class="p">,</span> <span class="n">dm</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">StrikeSection</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rcm8cube</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="s1">&#39;demo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;velocity&#39;</span><span class="p">)</span>
 </pre></div>
@@ -238,7 +240,7 @@ create a new) <cite>Axes</cite> object.</p></li>
 <code class="docutils literal notranslate"><span class="pre">rcm8cube.show_section('demo',</span> <span class="pre">'velocity')</span></code>.</p>
 <p><em>Example 2:</em> Display a section, with “quick” stratigraphy, as the
 <cite>depth</cite> attribute, displaying several different section styles.</p>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rcm8cube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">cube</span><span class="o">.</span><span class="n">rcm8</span><span class="p">()</span>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rcm8cube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">rcm8</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rcm8cube</span><span class="o">.</span><span class="n">stratigraphy_from</span><span class="p">(</span><span class="s1">&#39;eta&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rcm8cube</span><span class="o">.</span><span class="n">register_section</span><span class="p">(</span><span class="s1">&#39;demo&#39;</span><span class="p">,</span> <span class="n">dm</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">StrikeSection</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
 
@@ -322,9 +324,6 @@ create a new) <cite>Axes</cite> object.</p></li>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
         <li class="right" >
           <a href="deltametrics.section.CircularSection.html" title="deltametrics.section.CircularSection"
              >next</a> |</li>
