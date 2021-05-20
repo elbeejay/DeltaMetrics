@@ -473,6 +473,15 @@ class BaseCube(abc.ABC):
                                 'section registered to the cube.')
             SectionInstance.show(**kwargs)
 
+    def close(self):
+        """Close connection to the netCDF file."""
+        self._dataio.dataset.close()
+
+    def disconnect(self):
+        """Alias for self.close()."""
+        self.close()
+
+
 
 class DataCube(BaseCube):
     """DataCube object.
